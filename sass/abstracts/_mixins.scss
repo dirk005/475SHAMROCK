@@ -1,0 +1,38 @@
+/* Position in center if parent */
+
+@mixin absCenter {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* MEDIA QUERY MANAGER */
+
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == small {
+        @media only screen and (max-width : $bp-small){ @content };   // 600px /16px
+    }
+     @if $breakpoint == meduim {
+        @media only screen and (max-width : $bp-meduim){ @content };   // 900px /16px
+    }
+     @if $breakpoint == large {
+        @media only screen and (max-width : $bp-large){ @content };      // 1200px /16px
+    }
+     @if $breakpoint == xlarge {
+        @media only screen and (min-width : $bp-xlarge){ @content };   // 1800px /16px
+    }
+}
+
+/* USE FOR RESPONSIVE IMAGES */
+
+@mixin respondImage{
+     @media only screen and (min-resolution :192dpi) and  (min-width: $bp-small),
+                    only screen and (-webkit-min-device-pixal-ratio:2 ) and (min-width: $bp-small), //For safari
+                    only screen and (min-width:$bp-xlarge) {
+                            @content;
+                        }
+}
+
