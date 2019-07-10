@@ -13,7 +13,11 @@
 
 
 /* Import Layout files */
-
+@import "layout/header";
+@import "layout/nav";
+@import "layout/popup";
+@import "layout/rooms";
 
 /* Import Page files */
-
+@import "pages/home";
+@import "pages/accommodation";

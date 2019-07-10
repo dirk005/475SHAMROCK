@@ -9,13 +9,14 @@ $bp-large : 75em;          // 900px -1200px    : large
 $bp-xlarge : 112.5em;        // 1800px  +            : xlarge
 
 /* COLORS */
-$color-primary:   #399898;
+$color-primary: #c69963;
 
-$color-primary-light: #69FBFB;
-$color-primary-dark:#0F3434;
 
-$color-secondery-light: #FF6A6A;
-$color-secondery-dark: #571919;
+$color-primary-light: rgb(180, 147, 110);
+$color-primary-dark:rgb(151, 113, 70);
+
+$color-secondery-light: #5a9ae4;
+$color-secondery-dark: #101d2c;
 
 $color-tertiary-light: #69FD69;
 $color-tertiary-dark: #144614;
@@ -29,6 +30,8 @@ $color-grey-dark-1: #333;
 $color-grey-dark-2: #777;
 $color-grey-dark-3: #999;
 
+$color-black:#000;
+$color-white:#fff;
 /* FONTS */
 $default-font-size:1.6rem;
 $font-small:1.2rem;

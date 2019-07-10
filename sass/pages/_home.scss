@@ -1,0 +1,34 @@
+.home{
+     grid-column: full-start /full-end;
+     grid-row: 2 / -1;
+     margin: 3rem 2rem;
+     padding: 1rem;
+     display:grid;
+     grid-template-rows: 30rem;
+     grid-template-columns: repeat(6, 1fr);
+     grid-gap:3rem;
+
+     &__text{
+         grid-column: 1/4;
+         grid-row: 1 / -1;
+         margin-bottom: 3rem;
+     }
+     &__image{
+         grid-column: 5/-1;
+         grid-row: 1 / -1;
+         padding: 1rem;
+         overflow: hidden;
+         border:.7rem solid $color-primary;
+         height: 40rem;
+     }
+
+     &__buttons{
+         grid-column: 5/-1;
+         grid-row: 1 / -1;
+         align-items: end;
+         margin-top:3rem;
+     }
+      &__btn {          
+         margin-top:2rem; 
+      }
+}
