@@ -1,0 +1,88 @@
+.nav{
+     grid-column: sidebar-start /sidebar-end;
+     grid-row: 1 / -1;
+     z-index: 100;
+    width: 20rem;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding-top: 2rem;
+    background-color: $color-secondery-dark;
+    box-shadow: 0 0 1rem $color-secondery-light;
+    
+    &__logo {
+        font-family: 'Catamaran', sans-serif;
+        padding:1rem;
+        font-size: 1.3rem;
+        color:$color-primary;
+        &-heading{
+
+            &--block{
+                border-radius: .5rem;
+                padding: 0 .1rem ;
+                border:.2rem solid $color-primary;
+            }
+        }
+        
+    }
+    
+    &__list{
+        font-size: 1.5rem;
+        list-style: none;
+        margin-top: 1.5rem;
+    }
+
+    
+
+     &__item {
+         position: relative;
+         
+
+         &:not(:last-child) {
+             margin-bottom: .2rem;
+         }
+
+
+         &::before {
+             content: "";
+             position: absolute;
+             top: 0;
+             left: 0;
+             height: 100%;
+             width: .3rem;
+             background-color: $color-primary;
+             transform: scaleY(0);
+             transition: transform .2s,
+                 width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                 background-color .3s;
+         }
+
+         &:hover::before,
+         &--active::before {
+             transform: scaleY(1);
+             width: 100%;
+         }
+
+         &:active::before {
+             background-color: $color-primary-light;
+             
+         }
+     }
+
+     &__link {
+         position: relative;
+         z-index: 10;
+
+         &:link,
+         &:visited {
+             color: white;
+             text-decoration: none;
+             text-transform: uppercase;
+             display: block;
+             padding: 1.5rem 3rem;
+             display: flex;
+             align-items: center;
+         }         
+     }
+}

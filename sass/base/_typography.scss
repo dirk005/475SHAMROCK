@@ -1,8 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
+
 /* SET DEFAULT BODY STYLES */
 body{
     font-family:  sans-serif;
     font-weight: 400;
     font-size: $default-font-size;
     line-height: 1.7;
-    color:$color-grey-dark-1;    
+    color:$color-grey-dark-1;  
+    background-color: $color-grey-light-2;
+}
+
+//Secondary heading
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: .2rem;
+
+    //Set color for older browsers
+    color: $color-grey-dark-1;
+
+    
+
+    @include respond(medium) {
+        font-size: 3rem;
+    }
+}
+
+//Paragraph styles 
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+//button styles
+.btn {
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+    
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+     
+         
+     
 }

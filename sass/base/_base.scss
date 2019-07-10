@@ -15,3 +15,18 @@ html{
             font-size: 50% // 1rem = 8px smaller from 900px
     }
 }
+
+/*  Change selection colors */
+::selection {
+    background-color: $color-primary;
+   // color: $color-white;
+}
+
+//Main layout 
+.container {
+    display: grid;
+    // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: min-content min-content;
+    grid-template-columns: [sidebar-start] 20rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end])[center-end] minmax(6rem, 1fr) [full-end];
+
+}

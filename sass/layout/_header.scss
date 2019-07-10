@@ -1,0 +1,29 @@
+.header{
+     grid-column: full-start /full-end;
+     grid-row: 1 / 2;
+    position: relative;
+    
+    margin:0;
+    padding:0;
+    height: 50vh;   
+    box-shadow: 0 0rem 1rem $color-primary-light;
+    background-image: linear-gradient(to right bottom,
+        rgba($color-grey-light-1, 0.8),
+        rgba($color-primary-dark, 0.6)),
+    url(../img/home-main.png);
+    
+    &__text{
+        font-size: 4rem;
+        font-weight: 600;
+        text-shadow: 0 .1rem .2rem $color-grey-dark-1;
+        padding: 1rem;
+        border-radius: .5rem;
+        // position: absolute;
+        // top:40%;
+        // left: 50%;
+        // transform: translate(-30%, -50%);
+        // text-align: center;
+        color:$color-grey-dark-1;
+        @include absCenter;
+    }
+}
